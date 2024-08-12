@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/tub.js" defer></script>
+    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Test</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="modal_body">
+        <div class="modal">
+          <div class="container">
+            <div class="modal_content">
+              <h3 class="title">Создать локацию</h3>
+              <form action="" class="create">
+                <input type="text" class="form_input" placeholder="Название" />
+                <input type="text" class="form_input" placeholder="Штрихкод" />
+                <input type="text" class="form_input" placeholder="RFID" />
+                <select name="" id="" class="form_input">
+                  <option value="">Вложенность</option>
+                </select>
+                <div class="switches">
+                  <div class="switch_element">
+                    <p class="text">Виртуальная локация</p>
+                    <div class="switch">
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="switch_input"
+                        id="switch"
+                      />
+                      <label for="switch" class="btn_switch"></label>
+                    </div>
+                  </div>
+                  <div class="switch_element">
+                    <p class="text">Локация для утерь</p>
+                    <div class="switch">
+                      <input
+                        type="checkbox"
+                        name=""
+                        class="switch_input"
+                        id="switch2"
+                      />
+                      <label for="switch2" class="btn_switch"></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form_btn">
+                  <a href="" class="btn"
+                    ><img
+                      src="assets/img/save.png"
+                      alt=""
+                      class="icon"
+                    />Создать</a
+                  >
+                  <a href="" class="btn cancel">Отменить</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <header>
+        <div class="container">
+          <div class="header_content">
+            <div class="logo">
+              <img src="assets/img/logo.png" alt="logo" class="logo_icon" />
+            </div>
+            <div class="header_btn">
+              <a href="#" class="icon_btn"
+                ><img src="assets/img/log_in.png" alt="log_in_btn" class="icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <div class="main_content">
+            <div class="tubs">
+              <div class="tub" >
+                <img
+                  src="assets/img/possessions.png"
+                  alt="possessions"
+                  class="icon"
+                />
+                <a href="#" class="tub_link">Имущество</a>
+              </div>
+              <div class="tub">
+                <img
+                  src="assets/img/inventory.png"
+                  alt="inventory"
+                  class="icon"
+                />
+                <a href="#" class="tub_link">Инвентаризация</a>
+              </div>
+              <div class="tub">
+                <img src="assets/img/workers.png" alt="workers" class="icon" />
+                <a href="#" class="tub_link">Сотрудники</a>
+              </div>
+              <div class="tub">
+                <img
+                  src="assets/img/notifications.png"
+                  alt="notice"
+                  class="icon"
+                />
+                <a href="#" class="tub_link">Уведомления</a>
+              </div>
+              <div class="tub active" data-tab="#tab1">
+                <img
+                  src="assets/img/location.png"
+                  alt="location"
+                  class="icon"
+                />
+                <a href="#" class="tub_link">Локации</a>
+              </div>
+              <div class="tub" data-tab="#tab2">
+                <img src="assets/img/setting.png" alt="settings" class="icon" />
+                <a href="#" class="tub_link">Настройки</a>
+              </div>
+              <div class="tub hidden_btn">
+                <a href="#" class="link"> Скрыть меню</a>
+              </div>
+            </div>
+            <div class="tubs_content" >
+              <div class="content_item active" id="tab1">
+                <h1 class="title">Локации/Все локации</h1>
+                <div class="category_synchronization">
+                  <div class="categories">
+                    <div class="category active">Все локации</div>
+                    <div class="category">Импорт/Экспорт</div>
+                    <div class="category">Настройки</div>
+                  </div>
+                  <button class="synch_btn btn">
+                    <img
+                      src="assets/img/synchronization.png"
+                      alt="synchronization"
+                      class="btn_icon"
+                    />
+                    Синхронизация (дата и время)
+                  </button>
+                </div>
+                <div class="create_search">
+                  <button class="btn create_btn">
+                    <span>+</span> Создать Локацию
+                  </button>
+                  <div class="search_content">
+                    <form action="" class="searchForm">
+                      <input type="checkbox" name="" id="" />
+                      <input type="text" name="search" placeholder="поиск" />
+                    </form>
+                  </div>
+                </div>
+                <div class="accordion">
+                  <ul class="acc">
+                    <li class="accord_item">
+                      <div class="accord_title">
+                        <div class="accord_icon"><p class="text"></p></div>
+                        <p class="color_points">⁝</p>
+                        <p class="text">Локация 1</p>
+                      </div>
+                      <div class="accord_content">
+                        <ul>
+                          <li class="accord_item">
+                            <div class="accord_title">
+                              <div class="accord_icon">
+                                <p class="text"></p>
+                              </div>
+                              <p class="color_points">⁝</p>
+                              <p class="text">Подотдел 1</p>
+                            </div>
+                            <div class="accord_content">
+                              <ul>
+                                <li class="accord_item_second">
+                                  <div class="accord_title">
+                                    <div class="accord_icon">
+                                      <p class="text"></p>
+                                    </div>
+                                    <p class="color_points">⁝</p>
+                                    <p class="text">Подподотдел 1</p>
+                                  </div>
+                                  <div class="accord_content"></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="accord_item">
+                            <div class="accord_title">
+                              <div class="accord_icon">
+                                <p class="text"></p>
+                              </div>
+                              <p class="color_points">⁝</p>
+                              <p class="text">Подотдел 2</p>
+                            </div>
+                            <div class="accord_content">
+                              <ul>
+                                <li class="accord_item_second">
+                                  <div class="accord_title">
+                                    <div class="accord_icon">
+                                      <p class="text"></p>
+                                    </div>
+                                    <p class="color_points">⁝</p>
+                                    <p class="text">Подподотдел 1</p>
+                                  </div>
+                                  <div class="accord_content"></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="accord_item">
+                            <div class="accord_title">
+                              <div class="accord_icon">
+                                <p class="text"></p>
+                              </div>
+                              <p class="color_points">⁝</p>
+                              <p class="text">Подотдел 3</p>
+                            </div>
+                            <div class="accord_content">
+                              <ul>
+                                <li class="accord_item_second">
+                                  <div class="accord_title">
+                                    <div class="accord_icon">
+                                      <p class="text"></p>
+                                    </div>
+                                    <p class="color_points">⁝</p>
+                                    <p class="text">Подподотдел 1</p>
+                                  </div>
+                                  <div class="accord_content"></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="accord_item">
+                      <div class="accord_title">
+                        <div class="accord_icon"><p class="text"></p></div>
+                        <p class="color_points">⁝</p>
+                        <p class="text">Локация 2</p>
+                      </div>
+                      <div class="accord_content">
+                        <ul>
+                          <li class="accord_item">
+                            <div class="accord_title">
+                              <div class="accord_icon">
+                                <p class="text"></p>
+                              </div>
+                              <p class="color_points">⁝</p>
+                              <p class="text">Подотдел 1</p>
+                            </div>
+                            <div class="accord_content">
+                              <ul>
+                                <li class="accord_item_second">
+                                  <div class="accord_title">
+                                    <div class="accord_icon">
+                                      <p class="text"></p>
+                                    </div>
+                                    <p class="color_points">⁝</p>
+                                    <p class="text">Подподотдел 1</p>
+                                  </div>
+                                  <div class="accord_content"></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="accord_item">
+                            <div class="accord_title">
+                              <div class="accord_icon">
+                                <p class="text"></p>
+                              </div>
+                              <p class="color_points">⁝</p>
+                              <p class="text">Подотдел 2</p>
+                            </div>
+                            <div class="accord_content">
+                              <ul>
+                                <li class="accord_item_second">
+                                  <div class="accord_title">
+                                    <div class="accord_icon">
+                                      <p class="text"></p>
+                                    </div>
+                                    <p class="color_points">⁝</p>
+                                    <p class="text">Подподотдел 1</p>
+                                  </div>
+                                  <div class="accord_content"></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li class="accord_item">
+                            <div class="accord_title">
+                              <div class="accord_icon">
+                                <p class="text"></p>
+                              </div>
+                              <p class="color_points">⁝</p>
+                              <p class="text">Подотдел 3</p>
+                            </div>
+                            <div class="accord_content">
+                              <ul>
+                                <li class="accord_item_second">
+                                  <div class="accord_title">
+                                    <div class="accord_icon">
+                                      <p class="text"></p>
+                                    </div>
+                                    <p class="color_points">⁝</p>
+                                    <p class="text">Подподотдел 1</p>
+                                  </div>
+                                  <div class="accord_content"></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+
+                    <li class="accord_item">
+                      <div class="accord_title">
+                        <div class="accord_icon"><p class="text"></p></div>
+                        <p class="color_points">⁝</p>
+                        <p class="text">Локация 3</p>
+                      </div>
+                      <div class="accord_content">
+                        <ul>
+                          <li class="accord_item">
+                            <div class="accord_title">
+                              <div class="accord_icon">
+                                <p class="text"></p>
+                              </div>
+                              <p class="color_points">⁝</p>
+                              <p class="text">Подотдел 1</p>
+                            </div>
+                            <div class="accord_content">
+                              <ul>
+                                <li class="accord_item_second">
+                                  <div class="accord_title">
+                                    <div class="accord_icon">
+                                      <p class="text"></p>
+                                    </div>
+                                    <p class="color_points">⁝</p>
+                                    <p class="text">Подподотдел 1</p>
+                                  </div>
+                                  <div class="accord_content"></div>
+                                </li>
+                              </ul>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="content_item" id="tab2">
+                <h1 class="title">Настройки / Локации</h1>
+                <div class="categories">
+                  <div class="category">Имущество</div>
+                  <div class="category">Инвентаризация</div>
+                  <div class="category">Сотрудники</div>
+                  <div class="category active">Локации</div>
+                  <div class="category">Уведомления</div>
+                  <div class="category">Справочники</div>
+                  <div class="category">Пользователь</div>
+                </div>
+                <h1 class="title">Настройка полей таблицы</h1>
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th>Описание</th>
+                      <th>Сортировка</th>
+                      <th>ID</th>
+                      <th>Тип поля</th>
+                      <th>Выводить таблицу</th>
+                      <th>Обязательно</th>
+                      <th>Удалить</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="">
+                        <p class="color_points">⁝</p>
+                        Название
+                        <img
+                          src="assets/img/edit.png"
+                          alt="edit"
+                          class="icon"
+                        />
+                      </td>
+                      <td><span class="description">?</span></td>
+                      <td>500</td>
+                      <td>1001</td>
+                      <td>Строка</td>
+                      <form action="">
+                        <td>
+                          <input
+                            type="checkbox"
+                            class="check"
+                            name=""
+                            id=""
+                            checked
+                          />
+                        </td>
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td></td>
+                      </form>
+                    </tr>
+                    <tr>
+                      <td class="">
+                        <p class="color_points">⁝</p>
+                        Цена
+                        <img
+                          src="assets/img/edit.png"
+                          alt="edit"
+                          class="icon"
+                        />
+                      </td>
+                      <td></td>
+                      <td>510</td>
+                      <td>1002</td>
+                      <td>Число</td>
+                      <form action="">
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                      </form>
+                    </tr>
+                    <tr>
+                      <td class="">
+                        <p class="color_points">⁝</p>
+                        МОЛ
+                        <img
+                          src="assets/img/edit.png"
+                          alt="edit"
+                          class="icon"
+                        />
+                      </td>
+                      <td></td>
+                      <td>520</td>
+                      <td>1003</td>
+                      <td>
+                        Справочник
+                        <img
+                          src="assets/img/directory.png"
+                          alt="inventory"
+                          class="icon"
+                        />
+                      </td>
+                      <form action="">
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" /></td>
+                      </form>
+                    </tr>
+                    <tr>
+                      <td class="">
+                        <p class="color_points">⁝</p>
+                        Фото
+                        <img
+                          src="assets/img/edit.png"
+                          alt="edit"
+                          class="icon"
+                        />
+                      </td>
+                      <td></td>
+                      <td>530</td>
+                      <td>1004</td>
+                      <td>Файл</td>
+                      <form action="">
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" /></td>
+                      </form>
+                    </tr>
+                    <tr>
+                      <td class="">
+                        <p class="color_points">⁝</p>
+                        Цвет
+                        <img
+                          src="assets/img/edit.png"
+                          alt="edit"
+                          class="icon"
+                        />
+                      </td>
+                      <td></td>
+                      <td>540</td>
+                      <td>1005</td>
+                      <td>Строка</td>
+                      <form action="">
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" /></td>
+                      </form>
+                    </tr>
+                    <tr>
+                      <td class="">
+                        <p class="color_points">⁝</p>
+                        Локация
+                        <img
+                          src="assets/img/edit.png"
+                          alt="edit"
+                          class="icon"
+                        />
+                      </td>
+                      <td></td>
+                      <td>550</td>
+                      <td>1006</td>
+                      <td>
+                        Справочник
+                        <img
+                          src="assets/img/directory.png"
+                          alt="inventory"
+                          class="icon"
+                        />
+                      </td>
+                      <form action="">
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" /></td>
+                      </form>
+                    </tr>
+                    <tr>
+                      <td class="">
+                        <p class="color_points">⁝</p>
+                        Количество
+                        <img
+                          src="assets/img/edit.png"
+                          alt="edit"
+                          class="icon"
+                        />
+                      </td>
+                      <td></td>
+                      <td>560</td>
+                      <td>1007</td>
+                      <td>Число</td>
+                      <form action="">
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" /></td>
+                      </form>
+                    </tr>
+                    <tr>
+                      <td class="">
+                        <p class="color_points">⁝</p>
+                        Описание
+                        <img
+                          src="assets/img/edit.png"
+                          alt="edit"
+                          class="icon"
+                        />
+                      </td>
+                      <td></td>
+                      <td>570</td>
+                      <td>1008</td>
+                      <td>Текст</td>
+                      <form action="">
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" /></td>
+                      </form>
+                    </tr>
+                    <tr>
+                      <td class="">
+                        <p class="color_points">⁝</p>
+                        Количество
+                        <img
+                          src="assets/img/edit.png"
+                          alt="edit"
+                          class="icon"
+                        />
+                      </td>
+                      <td></td>
+                      <td>580</td>
+                      <td>1009</td>
+                      <td>Число</td>
+                      <form action="">
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" checked /></td>
+                        <td><input type="checkbox" name="" id="" /></td>
+                      </form>
+                    </tr>
+                  </tbody>
+                </table>
+                <button class="btn"><span>+</span> Добавить поле</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="container">
+          <div class="footer_content">
+            <p class="text"></p>
+            <div class="footer_info">
+              <p class="text">Последний приём 20.09.2021 18:36:21</p>
+              <p class="text">Последняя передача 20.09.2021 18:38:21</p>
+            </div>
+            <div class="footer_btn">
+              <a href="" class="link"
+                ><img
+                  src="assets/img/Documents.png"
+                  alt="document"
+                  class="icon"
+                />
+                Документация</a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
